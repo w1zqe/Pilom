@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="50150b86e53a46c885d9be74a4e78416" Name="Diagram1">
+        <EntityTypeShape EntityType="PilomModel.Categories" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="PilomModel.Korzina" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PilomModel.OrderDetails" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PilomModel.Orders" Width="1.5" PointX="3" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PilomModel.Payments" Width="1.5" PointX="5.25" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PilomModel.ProductReviews" Width="1.5" PointX="8.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PilomModel.Products" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PilomModel.Stock" Width="1.5" PointX="5.25" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PilomModel.Suppliers" Width="1.5" PointX="3.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PilomModel.Supplies" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PilomModel.SupplyDetails" Width="1.5" PointX="8.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PilomModel.Units" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PilomModel.UserRoles" Width="1.5" PointX="1.5" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PilomModel.Users" Width="1.5" PointX="0.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PilomModel.Warehouses" Width="1.5" PointX="3" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="PilomModel.WoodTypes" Width="1.5" PointX="0.75" PointY="11" IsExpanded="true" />
+        <AssociationConnector Association="PilomModel.FK__Products__Catego__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="PilomModel.FK_Korzina_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="PilomModel.FK_Korzina_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="PilomModel.FK__OrderDeta__Order__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="PilomModel.FK__OrderDeta__Produ__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="PilomModel.FK__Orders__UserID__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="PilomModel.FK__Payments__OrderI__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="PilomModel.FK__ProductRe__Produ__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="PilomModel.FK__ProductRe__UserI__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="PilomModel.FK__Products__UnitID__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="PilomModel.FK__Products__WoodTy__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="PilomModel.FK__Stock__ProductID__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="PilomModel.FK__SupplyDet__Produ__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="PilomModel.FK__Stock__Warehouse__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="PilomModel.FK__Supplies__Suppli__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="PilomModel.FK__SupplyDet__Suppl__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="PilomModel.FK__Users__RoleID__398D8EEE" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

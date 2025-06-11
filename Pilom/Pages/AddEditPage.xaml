@@ -1,0 +1,135 @@
+﻿<Page x:Class="Pilom.Pages.AddEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="AddEditPage"
+      Loaded="Page_Loaded">
+
+    <Grid Background="#FFE6F2FF">
+        <Border Background="White" CornerRadius="20" Padding="30"
+                Width="600" VerticalAlignment="Center" HorizontalAlignment="Center"
+                BorderBrush="#FF3A7CA5" BorderThickness="2">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+
+                    <TextBlock x:Name="PageTitleTextBlock" Text="Добавление/Редактирование продукта"
+                               FontSize="24" FontWeight="Bold"
+                               Foreground="#2C5364" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+                    <!-- Название -->
+                    <Grid Margin="0,0,0,10">
+                        <TextBox x:Name="NameBox" Height="35" Padding="10,0"
+                                 VerticalContentAlignment="Center" TextChanged="TextBox_TextChanged"/>
+                        <TextBlock x:Name="NamePlaceholder" Text="Название" Margin="10,0,0,0" VerticalAlignment="Center"
+                                   Foreground="Gray" IsHitTestVisible="False"/>
+                    </Grid>
+
+                    <!-- Описание -->
+                    <Grid Margin="0,0,0,10">
+                        <TextBox x:Name="DescriptionBox" Height="100" Padding="10"
+                                 TextWrapping="Wrap" AcceptsReturn="True" TextChanged="TextBox_TextChanged"/>
+                        <TextBlock x:Name="DescriptionPlaceholder" Text="Описание" Margin="10,8,0,0"
+                                   VerticalAlignment="Top" Foreground="Gray" IsHitTestVisible="False"/>
+                    </Grid>
+
+                    <!-- Категория -->
+                    <Grid Margin="0,0,0,10">
+                        <ComboBox x:Name="CategoryComboBox" Height="35"
+                                  DisplayMemberPath="Name" SelectedValuePath="CategoryID"
+                                  SelectionChanged="ComboBox_SelectionChanged"/>
+                        <TextBlock x:Name="CategoryPlaceholder" Text="Категория" Margin="10,0,0,0"
+                                   VerticalAlignment="Center" Foreground="Gray" IsHitTestVisible="False"/>
+                    </Grid>
+
+                    <!-- Вид дерева -->
+                    <Grid Margin="0,0,0,10">
+                        <ComboBox x:Name="WoodTypeComboBox" Height="35"
+                                  DisplayMemberPath="Name" SelectedValuePath="WoodTypeID"
+                                  SelectionChanged="ComboBox_SelectionChanged"/>
+                        <TextBlock x:Name="WoodTypePlaceholder" Text="Вид дерева" Margin="10,0,0,0"
+                                   VerticalAlignment="Center" Foreground="Gray" IsHitTestVisible="False"/>
+                    </Grid>
+
+                    <!-- Единицы измерения -->
+                    <Grid Margin="0,0,0,10">
+                        <ComboBox x:Name="UnitComboBox" Height="35"
+                                  DisplayMemberPath="Name" SelectedValuePath="UnitID"
+                                  SelectionChanged="ComboBox_SelectionChanged"/>
+                        <TextBlock x:Name="UnitPlaceholder" Text="Единицы измерения" Margin="10,0,0,0"
+                                   VerticalAlignment="Center" Foreground="Gray" IsHitTestVisible="False"/>
+                    </Grid>
+
+                    <!-- Длина -->
+                    <Grid Margin="0,0,0,10">
+                        <TextBox x:Name="LengthBox" Height="35" Padding="10,0"
+                                  TextChanged="TextBox_TextChanged"/>
+                        <TextBlock x:Name="LengthPlaceholder" Text="Длина (мм)" Margin="10,0,0,0"
+                                   VerticalAlignment="Center" Foreground="Gray" IsHitTestVisible="False"/>
+                    </Grid>
+
+                    <!-- Ширина -->
+                    <Grid Margin="0,0,0,10">
+                        <TextBox x:Name="WidthBox" Height="35" Padding="10,0"
+                                  TextChanged="TextBox_TextChanged"/>
+                        <TextBlock x:Name="WidthPlaceholder" Text="Ширина (мм)" Margin="10,0,0,0"
+                                   VerticalAlignment="Center" Foreground="Gray" IsHitTestVisible="False"/>
+                    </Grid>
+
+                    <!-- Толщина -->
+                    <Grid Margin="0,0,0,10">
+                        <TextBox x:Name="ThicknessBox" Height="35" Padding="10,0"
+                                  TextChanged="TextBox_TextChanged"/>
+                        <TextBlock x:Name="ThicknessPlaceholder" Text="Толщина (мм)" Margin="10,0,0,0"
+                                   VerticalAlignment="Center" Foreground="Gray" IsHitTestVisible="False"/>
+                    </Grid>
+
+                    <!-- Цена -->
+                    <Grid Margin="0,0,0,10">
+                        <TextBox x:Name="PriceBox" Height="35" Padding="10,0"
+                                  TextChanged="TextBox_TextChanged"/>
+                        <TextBlock x:Name="PricePlaceholder" Text="Цена (₽)" Margin="10,0,0,0"
+                                   VerticalAlignment="Center" Foreground="Gray" IsHitTestVisible="False"/>
+                    </Grid>
+
+                    <!-- Количество на складе -->
+                    <Grid Margin="0,0,0,10">
+                        <TextBox x:Name="StockQBox" Height="35" Padding="10,0"
+                                  TextChanged="TextBox_TextChanged"/>
+                        <TextBlock x:Name="StockQPlaceholder" Text="Количество на складе" Margin="10,0,0,0"
+                                   VerticalAlignment="Center" Foreground="Gray" IsHitTestVisible="False"/>
+                    </Grid>
+
+                    <!-- Изображение -->
+                    <StackPanel Orientation="Horizontal" Margin="0,25,0,0">
+                        <Grid>
+                            <TextBox x:Name="ImagePathTextBox" Width="250" TextChanged="TextBox_TextChanged"/>
+                            <TextBlock x:Name="ImagePlaceholder" Text="Путь к изображению" Margin="10,0,0,0"
+                                       VerticalAlignment="Center" Foreground="Gray" IsHitTestVisible="False"/>
+                        </Grid>
+                        <Image x:Name="imgPreview" Width="100" Height="100" Margin="10,0" Stretch="UniformToFill"/>
+                        <Button x:Name="btnSelectImage" Content="Выбрать изображение"
+                                Width="150" Margin="10,0"
+                                Click="BtnSelectImage_Click"
+                                Background="#3A7CA5" Foreground="White" FontWeight="Bold"/>
+                    </StackPanel>
+
+                    <!-- Кнопки -->
+                    <Button Content="Сохранить" Height="35" Background="#3A7CA5"
+                            Foreground="White" FontWeight="SemiBold"
+                            Click="SaveButton_Click" Margin="0,20,0,10"/>
+
+                    <Button Content="Отмена" Height="30" Background="Transparent"
+                            BorderBrush="#3A7CA5" BorderThickness="1"
+                            Foreground="#3A7CA5" Click="CancelButton_Click"/>
+
+                    <TextBlock x:Name="ErrorMessage" Foreground="#FF6B6B"
+                               TextWrapping="Wrap" Margin="0,10,0,0"
+                               Visibility="Collapsed"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Page>
