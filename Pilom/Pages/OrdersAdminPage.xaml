@@ -29,9 +29,9 @@
                   AlternatingRowBackground="LightCyan">
             <DataGrid.Columns>
                 <!-- Основная информация о заказе -->
-                <DataGridTextColumn Header="Номер заказа" Binding="{Binding ID_Order}" Width="Auto"/>
-                <DataGridTextColumn Header="Дата" Binding="{Binding Data, StringFormat=dd.MM.yyyy}" Width="Auto"/>
-                <DataGridTextColumn Header="Пользователь" Binding="{Binding Users.UserName}" Width="*"/>
+                <DataGridTextColumn Header="Номер заказа" Binding="{Binding OrderID}" Width="Auto"/>
+                <DataGridTextColumn Header="Дата" Binding="{Binding OrderDate, StringFormat=dd.MM.yyyy}" Width="Auto"/>
+                <DataGridTextColumn Header="Пользователь" Binding="{Binding Users.Name}" Width="*"/>
 
                 <!-- Колонка с кнопкой для просмотра состава заказа -->
                 <DataGridTemplateColumn Header="Состав заказа" Width="Auto">
@@ -39,7 +39,7 @@
                         <DataTemplate>
                             <Button Content="Просмотр" 
                                     Click="ShowOrderDetails_Click"
-                                    Tag="{Binding ID_Order}"/>
+                                    Tag="{Binding OrderID}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

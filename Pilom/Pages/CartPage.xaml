@@ -35,11 +35,13 @@
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
 
-                                <Image Source="{Binding Product.CurrentPhoto}" Width="80" Height="80" Margin="10"/>
+                                <Image Source="{Binding Products.CurrentPhoto}" Width="80" Height="80" Margin="10"/>
 
                                 <StackPanel Grid.Column="1" Margin="10,0">
-                                    <TextBlock Text="{Binding Product.Name}" FontWeight="Bold" FontSize="14"/>
-                                    <TextBlock Text="{Binding Product.Price, StringFormat=Цена: {0:C}}" FontSize="13"/>
+                                    <TextBlock Text="{Binding Products.Name}" FontWeight="Bold" FontSize="14"/>
+                                    <TextBlock Text="{Binding Products.Price, StringFormat='Цена: {0:C}'}" FontSize="13"/>
+                                    <TextBlock Text="{Binding Quantity, StringFormat='Количество: {0}'}" FontSize="13"/>
+                                    <TextBlock Text="{Binding TotalPrice, StringFormat='Сумма: {0:C}'}" FontSize="13" FontWeight="SemiBold"/>
                                     <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
                                         <Button Content="−" Width="25" Height="25" Click="DecreaseQuantity_Click" Tag="{Binding}" />
                                         <TextBlock Text="{Binding Quantity}" Width="30" TextAlignment="Center" VerticalAlignment="Center"/>
